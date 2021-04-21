@@ -22,4 +22,10 @@ public class HomeController {
 		return "home";
 	}
 
+	@RequestMapping("/office")
+	public String welcome(Map<String, Object> model) {
+		model.put("time", new Date());
+		model.put("message", this.message);
+		return "office";
+	}
 }
